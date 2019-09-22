@@ -1,10 +1,24 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Home from './Home';
+import Teams from './Teams';
+import Players from './Players';
+import Navbar from './Navbar';
 
 function App() {
   return (
-    <div>
-      React Router Course
-    </div>
+    <Router>
+      <div>
+        <Navbar/>
+
+        <Switch>
+          <Route path='/' exact component={Home} />
+          <Route path='/teams' component={Teams} />
+          <Route path='/players' component={Players} />
+          <Route render={() => <h1 className='text-center'>Four oh Four.</h1>} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
