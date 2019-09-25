@@ -9,7 +9,7 @@ Sidebar.propTypes = {
   loading: PropTypes.bool.isRequired
 };
 
-function CustomLink({ to, children }){
+function CustomLink ({ to, children }) {
   return (
     <Route
       path={to.pathname}
